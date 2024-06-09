@@ -1,0 +1,16 @@
+if SHIELD_UNIFI_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "UniFi"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_UNIFI_LEFT || SHIELD_UNIFI_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

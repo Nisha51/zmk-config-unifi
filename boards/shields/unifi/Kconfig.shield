@@ -1,0 +1,5 @@
+config SHIELD_UNIFI_LEFT
+    def_bool $(shields_list_contains,unifi_left)
+
+config SHIELD_UNIFI_RIGHT
+    def_bool $(shields_list_contains,unfi_right)

@@ -1,0 +1,14 @@
+file_format: "1"
+id: unifi
+name: UniFi
+type: shield
+url: https://github.com/Nisha51/zmk-config-unifi/
+requires: [nice_nano_v2]
+features:
+  - keys
+  - encoder
+  - display
+  - rgb
+siblings:
+  - unifi_left
+  - unifi_right
