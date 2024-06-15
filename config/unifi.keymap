@@ -35,10 +35,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp Q                        &kp W                  &kp E                      &kp R                   &kp T        &kp Y      &kp U                   &kp I                       &kp O                       &kp P
-&Home_Row_Mods LEFT_SHIFT A  &Home_Row_Mods LGUI S  &Home_Row_Mods LEFT_ALT D  &Home_Row_Mods LCTRL F  &kp G        &kp H      &Home_Row_Mods RCTRL J  &Home_Row_Mods RIGHT_ALT K  &Home_Row_Mods RIGHT_GUI L  &Home_Row_Mods RIGHT_SHIFT SEMI
-&kp Z                        &kp X                  &kp C                      &kp V                   &kp B        &kp N      &kp M                   &kp COMMA                   &kp DOT                     &kp FSLH
-                             &out OUT_TOG           &mo 1                      &mo 2                   &kp SPACE    &kp ENTER  &mo 3                   &mo 4                       &rgb_ug RGB_TOG
+&kp Q                  &kp W                      &kp E                   &kp R                        &kp T        &kp Y      &kp U                         &kp I                   &kp O                       &kp P
+&Home_Row_Mods LGUI A  &Home_Row_Mods LEFT_ALT S  &Home_Row_Mods LCTRL D  &Home_Row_Mods LEFT_SHIFT F  &kp G        &kp H      &Home_Row_Mods RIGHT_SHIFT J  &Home_Row_Mods RCTRL K  &Home_Row_Mods RIGHT_ALT L  &Home_Row_Mods RIGHT_GUI SEMI
+&kp Z                  &kp X                      &kp C                   &kp V                        &kp B        &kp N      &kp M                         &kp COMMA               &kp DOT                     &kp FSLH
+                       &out OUT_TOG               &mo 1                   &mo 2                        &kp SPACE    &kp ENTER  &mo 3                         &mo 4                   &rgb_ug RGB_TOG
             >;
         };
 
