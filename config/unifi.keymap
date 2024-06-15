@@ -5,6 +5,8 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
@@ -27,7 +29,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Alphas {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -51,7 +53,7 @@
             >;
         };
 
-        Numpad {
+        Num {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &kp TILDE             &kp N7        &kp N8        &kp N9        &kp N0
 &trans  &trans  &trans  &trans  &trans    &kp NON_US_BACKSLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SQT
@@ -62,19 +64,19 @@
 
         Nav {
             bindings = <
-&trans  &trans          &kp UP_ARROW    &trans           &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans          &trans           &trans    &trans  &trans  &trans  &trans  &trans
-        &trans          &trans          &trans           &trans    &trans  &trans  &trans  &trans
+&mt LCTRL X  &kp INSERT      &kp UP_ARROW    &kp ESCAPE       &kp BACKSPACE    &trans  &trans  &trans  &trans  &trans
+&mt LCTRL C  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mt LCTRL Z      &trans  &trans  &trans  &trans  &trans
+&mt LCTRL V  &kp DELETE      &kp HOME        &kp END          &mt LCTRL Y      &trans  &trans  &trans  &trans  &trans
+             &trans          &kp PAGE_UP     &kp PAGE_DOWN    &trans           &trans  &trans  &trans  &trans
             >;
         };
 
-        Mouse {
+        Misc {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&rgb_ug RGB_TOG    &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI    &trans  &trans  &trans  &trans  &trans
+&ext_power EP_TOG  &out OUT_TOG     &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD    &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL     &bt BT_NXT       &kp K_PREV       &kp K_MUTE       &kp K_NEXT         &trans  &trans  &trans  &trans  &trans
+                   &trans           &kp C_BRI_DEC    &kp C_BRI_UP     &trans             &trans  &trans  &trans  &trans
             >;
         };
     };
