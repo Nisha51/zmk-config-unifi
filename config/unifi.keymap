@@ -112,7 +112,7 @@
             >;
 
             label = "5";
-            sensor-bindings = <&rgb_encoder_hue>, <&inc_dec_kp 0 0>;
+            sensor-bindings = <&rgb_encoder_hue>, <&rgb_encoder_hue>;
         };
 
         Colemark {
