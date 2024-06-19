@@ -45,11 +45,46 @@
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
 
+        brightness: brightness {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "BRIGHTNESS";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_BRIGHTNESS_INC>, <&kp C_BRIGHTNESS_DEC>;
+        };
+
+        media_seek: media_seek {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "MEDIA_SEEK";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp LEFT>;
+        };
+
+        scroll_horizental: scroll_horizental {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL_HORIZENTAL";
+            #sensor-binding-cells = <0>;
+            bindings = <&mmv MOVE_HOR 200>, <&mmv MOVE_HOR -200>;
+        };
+
+        volume: volume {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "VOLUME";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+        };
+
+        scroll_vertical: scroll_vertical {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL_VERTICAL";
+            #sensor-binding-cells = <0>;
+            bindings = <&mmv MOVE_VERT 300>, <&mmv MOVE_VERT -300>;
+        };
+
         cycle_app: cycle_app {
-            compatible = "zmk,behavior-sensor-rotate-var";
+            compatible = "zmk,behavior-sensor-rotate";
             label = "CYCLE_APP";
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LA(TAB)>, <&kp LS(LA(TAB))>;
         };
     };
 
@@ -64,7 +99,8 @@
              &kp K_MUTE       &mo 1         &mo 2              &kp SPACE    &kp ENTER  &mo 3               &mo 4         &to 5
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&volume>, <&rgb_encoder_hue>;
+
             label = "1";
         };
 
@@ -76,9 +112,7 @@
         &kp CAPSLOCK  &trans  &trans  &trans    &trans           &trans  &trans  &to 6
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&rgb_encoder_hue>;
+            sensor-bindings = <&media_seek>, <&rgb_encoder_effect>;
 
             label = "2";
         };
@@ -91,9 +125,7 @@
         &out OUT_TOG  &trans  &trans  &trans    &kp TAB               &kp MINUS     &kp EQUAL     &to 7
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&rgb_encoder_effect>;
+            sensor-bindings = <&cycle_app>, <&rgb_encoder_brightness>;
 
             label = "3";
         };
@@ -106,9 +138,7 @@
              &rgb_ug RGB_TOG  &kp PAGE_UP     &kp PAGE_DOWN    &trans           &trans  &trans  &trans  &to 8
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&rgb_encoder_brightness>;
+            sensor-bindings = <&scroll_vertical>, <&brightness>;
 
             label = "4";
         };
@@ -121,9 +151,7 @@
         &bootloader     &trans          &trans           &trans    &trans  &trans  &trans  &to 9
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&cycle_app LA(TAB) LA(RS(TAB))>;
+            sensor-bindings = <&scroll_horizental>, <&none>;
 
             label = "5";
         };
