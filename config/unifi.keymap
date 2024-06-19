@@ -23,69 +23,6 @@
             flavor = "hold-preferred";
             hold-trigger-key-positions = <10 11 12 13 16 17 18 19>;
         };
-
-        rgb_encoder_hue: rgb_encoder_hue {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "RGB_ENCODER_HUE";
-            #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
-        };
-
-        rgb_encoder_effect: rgb_encoder_effect {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "RGB_ENCODER_EFFECT";
-            #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_EFF>, <&rgb_ug RGB_EFR>;
-        };
-
-        rgb_encoder_brightness: rgb_encoder_brightness {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "RGB_ENCODER_BRIGHTNESS";
-            #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-        };
-
-        brightness: brightness {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "BRIGHTNESS";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_BRIGHTNESS_INC>, <&kp C_BRIGHTNESS_DEC>;
-        };
-
-        media_seek: media_seek {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "MEDIA_SEEK";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp LEFT>;
-        };
-
-        scroll_horizental: scroll_horizental {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "SCROLL_HORIZENTAL";
-            #sensor-binding-cells = <0>;
-            bindings = <&mmv MOVE_HOR 200>, <&mmv MOVE_HOR -200>;
-        };
-
-        volume: volume {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "VOLUME";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
-        };
-
-        scroll_vertical: scroll_vertical {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "SCROLL_VERTICAL";
-            #sensor-binding-cells = <0>;
-            bindings = <&mmv MOVE_VERT 300>, <&mmv MOVE_VERT -300>;
-        };
-
-        cycle_app: cycle_app {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "CYCLE_APP";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp LA(TAB)>, <&kp LS(LA(TAB))>;
-        };
     };
 
     keymap {
@@ -96,7 +33,7 @@
 &kp Q        &kp W            &kp E         &kp R              &kp T        &kp Y      &kp U               &kp I         &kp O             &kp P
 &HRM LGUI A  &HRM LEFT_ALT S  &HRM LCTRL D  &HRM LEFT_SHIFT F  &kp G        &kp H      &HRM RIGHT_SHIFT J  &HRM RCTRL K  &HRM RIGHT_ALT L  &HRM RIGHT_GUI SEMI
 &kp Z        &kp X            &kp C         &kp V              &kp B        &kp N      &kp M               &kp COMMA     &kp DOT           &kp FSLH
-             &kp K_MUTE       &mo 1         &mo 2              &kp SPACE    &kp ENTER  &mo 3               &mo 4         &to 5
+             &kp K_MUTE       &mo 1         &mo 2              &kp SPACE    &kp ENTER  &mo 3               &mo 4         &rgb_ug RGB_TOG
             >;
 
             label = "1";
@@ -126,10 +63,10 @@
 
         Nav {
             bindings = <
-&mt LCTRL X  &kp INSERT       &kp UP_ARROW    &kp ESCAPE       &kp BACKSPACE    &trans  &trans  &trans  &trans  &trans
-&mt LCTRL C  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &mt LCTRL Z      &trans  &trans  &trans  &trans  &trans
-&mt LCTRL V  &kp DELETE       &kp HOME        &kp END          &mt LCTRL Y      &trans  &trans  &trans  &trans  &trans
-             &rgb_ug RGB_TOG  &kp PAGE_UP     &kp PAGE_DOWN    &trans           &trans  &trans  &trans  &to 8
+&mt LCTRL X  &kp INSERT      &kp UP_ARROW    &kp ESCAPE       &kp BACKSPACE    &trans  &trans  &trans  &trans  &trans
+&mt LCTRL C  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mt LCTRL Z      &trans  &trans  &trans  &trans  &trans
+&mt LCTRL V  &kp DELETE      &kp HOME        &kp END          &mt LCTRL Y      &trans  &trans  &trans  &trans  &trans
+             &to 5           &kp PAGE_UP     &kp PAGE_DOWN    &trans           &trans  &trans  &trans  &to 8
             >;
 
             label = "4";
