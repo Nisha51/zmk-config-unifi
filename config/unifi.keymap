@@ -132,10 +132,10 @@
 
         Valorant {
             bindings = <
-&kp NUMBER_1  &kp Q  &kp W         &kp E           &kp Y        &kp  &kp  &kp  &kp    &kp
-&kp NUMBER_2  &kp A  &kp S         &kp D           &kp F        &kp  &kp  &kp  &kp    &kp
-&kp NUMBER_3  &kp X  &kp NUMBER_4  &kp C           &kp G        &kp  &kp  &kp  &kp    &kp
-              &kp T  &kp LCTRL     &kp LEFT_SHIFT  &kp SPACE    &kp  &kp  &kp  &to 0
+&kp NUMBER_1  &kp Q  &kp W         &kp E           &kp Y        &none  &none  &none  &none  &none
+&kp NUMBER_2  &kp A  &kp S         &kp D           &kp F        &none  &none  &none  &none  &none
+&kp NUMBER_3  &kp X  &kp NUMBER_4  &kp C           &kp G        &none  &none  &none  &none  &none
+              &kp T  &kp LCTRL     &kp LEFT_SHIFT  &kp SPACE    &none  &none  &none  &to 0
             >;
         };
 
