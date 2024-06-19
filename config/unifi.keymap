@@ -10,7 +10,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/mouse.h>
 
 / {
     behaviors {
@@ -37,7 +36,9 @@
 &kp Z        &kp X            &kp C         &kp V              &kp B        &kp N      &kp M               &kp COMMA     &kp DOT           &kp FSLH
              &out OUT_TOG     &mo 1         &mo 2              &kp SPACE    &kp ENTER  &mo 3               &mo 4         &rgb_ug RGB_TOG
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            label = "1";
         };
 
         Fun {
@@ -47,7 +48,9 @@
 &trans  &trans  &trans  &trans  &trans    &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10
         &trans  &trans  &trans  &trans    &trans           &trans  &trans  &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            label = "2";
         };
 
         Num {
@@ -57,7 +60,9 @@
 &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACKET      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACKET
         &trans  &trans  &trans  &trans    &kp TAB               &kp MINUS     &kp EQUAL     &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            label = "3";
         };
 
         Nav {
@@ -67,7 +72,9 @@
 &mt LCTRL V  &kp DELETE      &kp HOME        &kp END          &mt LCTRL Y      &trans  &trans  &trans  &trans  &trans
              &trans          &kp PAGE_UP     &kp PAGE_DOWN    &trans           &trans  &trans  &trans  &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            label = "4";
         };
 
         Misc {
@@ -77,7 +84,9 @@
 &bt BT_CLR_ALL     &bt BT_NXT       &kp K_PREV       &kp K_MUTE       &kp K_NEXT         &trans  &trans  &trans  &trans  &trans
                    &trans           &kp C_BRI_DEC    &kp C_BRI_UP     &trans             &trans  &trans  &trans  &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            label = "5";
         };
     };
 };
