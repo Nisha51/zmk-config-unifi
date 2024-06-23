@@ -138,10 +138,10 @@
 
         Valorant {
             bindings = <
-&hrm_left Z NUMBER_1  &kp Q    &kp W                   &kp E           &kp Y        &none  &none  &none  &none  &none
-&kp NUMBER_2          &kp A    &kp S                   &kp D           &kp F        &none  &none  &none  &none  &none
-&kp NUMBER_3          &kp X    &kp NUMBER_4            &kp C           &kp G        &none  &none  &none  &none  &none
-                      &kp TAB  &hrm_left LCTRL ESCAPE  &kp LEFT_SHIFT  &kp SPACE    &none  &none  &none  &to 0
+&mt Z NUMBER_1  &kp Q    &kp W             &kp E           &kp Y        &none  &none  &none  &none  &none
+&kp NUMBER_2    &kp A    &kp S             &kp D           &kp F        &none  &none  &none  &none  &none
+&kp NUMBER_3    &kp X    &kp NUMBER_4      &kp C           &kp G        &none  &none  &none  &none  &none
+                &kp TAB  &mt LCTRL ESCAPE  &kp LEFT_SHIFT  &kp SPACE    &none  &none  &none  &to 0
             >;
 
             sensor-bindings = <&inc_dec_kp R B>;
