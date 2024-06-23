@@ -25,28 +25,24 @@
 
         rgb_encoder_hue: rgb_encoder_hue {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "RGB_ENCODER_HUE";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_BRD>;
         };
 
         rgb_encoder_eff: rgb_encoder_eff {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "RGB_ENCODER_EFF";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_EFF>, <&rgb_ug RGB_EFR>;
         };
 
         rgb_encoder_bgh: rgb_encoder_bgh {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "RGB_ENCODER_BGH";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
 
         rgb_encoder_sat: rgb_encoder_sat {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "RGB_ENCODER_SAT";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
         };
