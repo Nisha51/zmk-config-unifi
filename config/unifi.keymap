@@ -158,7 +158,7 @@
             bindings = <
 &kp Q             &kp W             &kp F              &kp P              &kp B        &kp J      &kp L                &kp U               &kp Y              &kp SEMI
 &hrm_left LGUI A  &hrm_left LALT R  &hrm_left LCTRL S  &hrm_left LSHFT T  &kp G        &kp M      &hrm_right RSHIFT N  &hrm_right RCTRL E  &hrm_right RALT I  &hrm_right RGUI O
-&kp X             &kp C             &kp D              &kp V              &kp Z        &kp K      &kp H                &kp COMMA           &kp DOT            &kp FSLH
+&kp Z             &kp X             &kp C              &kp D              &kp V        &kp K      &kp H                &kp COMMA           &kp DOT            &kp FSLH
                   &kp K_MUTE        &mo 1              &mo 2              &kp SPACE    &kp ENTER  &mo 3                &mo 4               &rgb_ug RGB_TOG
             >;
 
