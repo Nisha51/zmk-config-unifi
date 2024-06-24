@@ -158,10 +158,10 @@
 
         League {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &to 0
+&kp ESCAPE  &kp N1   &kp N2     &kp N3    &kp T        &trans  &trans  &trans  &trans  &trans
+&kp LSHFT   &kp Q    &kp W      &kp E     &kp R        &trans  &trans  &trans  &trans  &trans
+&kp P       &kp H    &kp B      &kp D     &kp F        &trans  &trans  &trans  &trans  &trans
+            &kp TAB  &kp LCTRL  &kp LALT  &kp SPACE    &trans  &trans  &trans  &to 0
             >;
         };
 
