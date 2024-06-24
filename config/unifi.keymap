@@ -147,15 +147,6 @@
             sensor-bindings = <&inc_dec_kp R R>;
         };
 
-        WuWa {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &to 0
-            >;
-        };
-
         League {
             bindings = <
 &kp ESCAPE  &kp N1   &kp N2  &kp N3      &kp NUMBER_4    &trans  &trans  &trans  &trans  &trans
@@ -167,10 +158,19 @@
 
         Honkai {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &tog 0
+&kp ESC    &kp Q   &kp W   &kp E   &kp R        &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp A   &kp S   &kp D   &kp F        &trans  &trans  &trans  &trans  &trans
+&kp C      &kp N1  &kp N2  &kp N3  &kp N4       &trans  &trans  &trans  &trans  &trans
+           &trans  &kp J   &kp B   &kp SPACE    &trans  &trans  &trans  &tog 0
+            >;
+        };
+
+        WuWa {
+            bindings = <
+&kp ESC    &kp Q   &kp W   &kp E   &kp T        &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp A   &kp S   &kp D   &kp F        &trans  &trans  &trans  &trans  &trans
+&kp C      &kp N1  &kp N2  &kp N3  &kp N4       &trans  &trans  &trans  &trans  &trans
+           &trans  &kp J   &kp B   &kp SPACE    &trans  &trans  &trans  &tog 0
             >;
         };
     };
