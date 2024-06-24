@@ -117,7 +117,7 @@
 &trans  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans          &trans           &trans    &trans  &trans  &trans  &trans  &trans
-        &bootloader     &trans          &trans           &trans    &trans  &trans  &trans  &to 8
+        &bootloader     &trans          &trans           &trans    &trans  &trans  &trans  &tog 8
             >;
 
             sensor-bindings =
@@ -159,7 +159,7 @@
 &kp Q             &kp W             &kp F              &kp P              &kp B        &kp J      &kp L                &kp U               &kp Y              &kp SEMI
 &hrm_left LGUI A  &hrm_left LALT R  &hrm_left LCTRL S  &hrm_left LSHFT T  &kp G        &kp M      &hrm_right RSHIFT N  &hrm_right RCTRL E  &hrm_right RALT I  &hrm_right RGUI O
 &kp X             &kp C             &kp D              &kp V              &kp Z        &kp K      &kp H                &kp COMMA           &kp DOT            &kp FSLH
-                  &kp K_MUTE        &mo 1              &mo 2              &kp SPACE    &kp ENTER  &mo 3                &mo 4               &to 0
+                  &kp K_MUTE        &mo 1              &mo 2              &kp SPACE    &kp ENTER  &mo 3                &mo 4               &rgb_ug RGB_TOG
             >;
 
             sensor-bindings =
