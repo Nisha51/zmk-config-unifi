@@ -115,10 +115,10 @@
 
         Misc {
             bindings = <
-&trans  &mkp RCLK          &mmv MOVE_UP    &mkp LCLK        &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans             &trans          &trans           &trans    &trans  &trans  &trans  &trans  &trans
-        &ext_power EP_TOG  &trans          &trans           &trans    &trans  &trans  &trans  &tog 8
+&rgb_ug RGB_EFF  &mkp RCLK          &mmv MOVE_UP    &mkp LCLK        &trans    &trans  &trans  &trans  &trans  &trans
+&rgb_ug RGB_BRI  &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans  &trans  &trans  &trans  &trans
+&trans           &trans             &trans          &trans           &trans    &trans  &trans  &trans  &trans  &trans
+                 &ext_power EP_TOG  &trans          &trans           &trans    &trans  &trans  &trans  &tog 8
             >;
 
             sensor-bindings =
