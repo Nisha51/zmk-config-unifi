@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -114,10 +115,10 @@
 
         Misc {
             bindings = <
-&trans  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans          &trans           &trans    &trans  &trans  &trans  &trans  &trans
-        &bootloader     &trans          &trans           &trans    &trans  &trans  &trans  &tog 8
+&trans  &mkp RCLK          &mmv MOVE_UP    &mkp LCLK        &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans             &trans          &trans           &trans    &trans  &trans  &trans  &trans  &trans
+        &ext_power EP_TOG  &trans          &trans           &trans    &trans  &trans  &trans  &tog 8
             >;
 
             sensor-bindings =
